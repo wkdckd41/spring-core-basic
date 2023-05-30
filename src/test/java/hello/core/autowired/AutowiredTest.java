@@ -7,6 +7,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.lang.Nullable;
 
+import java.util.Optional;
+
 public class AutowiredTest {
 
     @Test
@@ -27,7 +29,7 @@ public class AutowiredTest {
         }
 
         @Autowired
-        public void setNoBean3(Member noBean3) {
+        public void setNoBean3(Optional<Member> noBean3) {
             System.out.println("noBean3 = " + noBean3);
         }
     }
